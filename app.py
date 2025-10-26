@@ -117,7 +117,6 @@ def like():
     after_like = int(after.get('AccountInfo', {}).get('Likes', 0))
 
     return jsonify({
-        "credits": "Rifat",
         "likes_added": after_like - before_like,
         "likes_before": before_like,
         "likes_after": after_like,
