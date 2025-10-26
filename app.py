@@ -17,6 +17,8 @@ from config import URLS_LIKE, FILES
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+DARK = "DARK"
+
 app = Flask(__name__)
 
 def load_tokens(server):
