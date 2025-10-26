@@ -17,9 +17,10 @@ from config import URLS_LIKE, FILES
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-DARK = "DARK"
+DARK = "DevZayd"
 
 app = Flask(__name__)
+
 
 def load_tokens(server):
     """Load tokens from JSON file for the specified server."""
