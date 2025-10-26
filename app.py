@@ -123,7 +123,8 @@ def like():
         "player": after.get('AccountInfo', {}).get('PlayerNickname', ''),
         "uid": after.get('AccountInfo', {}).get('UID', 0),
         "status": 1 if after_like - before_like else 2,
-        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "DEV": DARK
     })
 
 if __name__ == "__main__":
