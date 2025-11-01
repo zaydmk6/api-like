@@ -80,7 +80,7 @@ async def send(token, url, data):
 async def multi(uid, server, url):
     enc = encrypt_message(create_like(uid, server))
     tokens = load_tokens(server)
-    return await asyncio.gather(*[send(tokens[i % len(tokens)]['token'], url, enc) for i in range(500)])
+    return await asyncio.gather(*[send(tokens[i % len(tokens)]['token'], url, enc) for i in range(1000)])
 
 
 def get_info_like(enc, server, token):
