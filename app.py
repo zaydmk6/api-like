@@ -115,7 +115,7 @@ def like():
 
     before_like = int(json.loads(MessageToJson(before)).get('AccountInfo', {}).get('Likes', 0))
     urls = URLS_LIKE
-    asyncio.run(multi(uid, server, urls.get(server, "://clientbp.ggwhitehawk.com/LikeProfile")))
+    asyncio.run(multi(uid, server, urls.get(server, "https://clientbp.ggblueshark.com/LikeProfile")))
 
     after = json.loads(MessageToJson(get_info_like(enc, server, tok)))
     after_like = int(after.get('AccountInfo', {}).get('Likes', 0))
