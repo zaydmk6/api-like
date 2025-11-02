@@ -85,7 +85,7 @@ async def multi(uid, server, url):
 
 def get_info_like(enc, server, token):
     r = requests.post(
-        "https://clientbp.ggblueshark.com/GetPlayerPersonalShow",
+        "https://clientbp.ggwhitehawk.com/GetPlayerPersonalShow",
         data=bytes.fromhex(enc), headers=get_headers(token), verify=False
     )
     try:
@@ -115,7 +115,7 @@ def like():
 
     before_like = int(json.loads(MessageToJson(before)).get('AccountInfo', {}).get('Likes', 0))
     urls = URLS_LIKE
-    asyncio.run(multi(uid, server, urls.get(server, "https://clientbp.ggblueshark.com/LikeProfile")))
+    asyncio.run(multi(uid, server, urls.get(server, "https://clientbp.ggwhitehawk.com/LikeProfile")))
 
     after = json.loads(MessageToJson(get_info_like(enc, server, tok)))
     after_like = int(after.get('AccountInfo', {}).get('Likes', 0))
